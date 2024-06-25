@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+*{
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+
+body{
+    background-color: #000;
+    margin: 10px 40px;
+}
+
+.navbar{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #171717;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.navbar #menu{
+    color: #fff;
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+    display: none;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+.navbar .nav-logo h2{
+    letter-spacing: 2px;
+    color: #1eb735d2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+}
+
+.navbar .nav-links a{
+    margin: 0 20px;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+    color: #a2a298;
+}
+
+.navbar .nav-links a.active{
+    color: #1eb735d2;
+    background-color: #333331;
+    border-radius: 10px;
+}
+
+.navbar .nav-links a:hover{
+    background-color: #333331;
+    border-radius: 10px;
+    color: #1eb735d2;
+}
+
+.hero{
+    padding: 20px 60px;
+    background-color: #171717;
+    margin-top: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+
+}
+
+.hero-text{
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+}
+
+.hero-text h3{
+    font-size: 40px;
+}
+
+.hero-text .hero-head.hidden{
+    display: none;
+}
+
+.hero-text p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero-text .resume{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    font-weight: 600;
+    background-color: #333331;
+    color: #1eb735d2;
+    transition: all 0.3s ease;
+}
+
+.hero-text .resume:hover{
+    background-color: #4c524c;
+    color: #1bed3ad2;
+    cursor: pointer;
+    transform: scale(1.1) translate3d(5px,0px,0px);
+}
+
+.hero-text .email{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    font-weight: 600;
+    background-color: #333331;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.hero-text .email.copied {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.hero-text .email:hover{
+    background-color: #4c524c;
+    cursor: pointer;
+    transform: scale(1.1) translate3d(5px,0px,0px);
+}
+
+.hero-image{
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img{
+    width: 300px;
+}
+
+.about{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+}
+
+.about .about-me{
+    background-color: #171717;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.about-me h1{
+    color: #fff;
+}
+
+.about-me h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.about .about-me p{
+    color: #4c524c;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.about .about-me .contact{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    font-weight: 600;
+    background-color: #333331;
+    color: #1eb735d2;
+    transition: all 0.3s ease;
+}
+
+.about .about-me .contact:hover{
+    background-color: #4c524c;
+    color: #1bed3ad2;
+    cursor: pointer;
+    transform: translate3d(5px,0px,0px);
+}
+
+.about .courses{
+    background-color: #171717;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+
+}
+
+.about .courses h1{
+    color: #fff;
+}
+
+.about .courses .course h3{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;   
+}
+
+.about .courses .course .bxs-circle{
+    color: #fff;
+}
+
+.about .courses .course .institute{
+    color: #4c524c;
+    margin-top: 10px;
+}
+
+.about .courses .course .duration{
+    color: #4c524c;
+    margin-top: 5px;
+}
+
+.about .courses .course .certificate{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    font-weight: 600;
+    background-color: #333331;
+    color: #1eb735d2;
+    transition: all 0.3s ease;
+}
+.about .courses .course .certificate:hover{
+    background-color: #4c524c;
+    color: #1bed3ad2;
+    cursor: pointer;
+    transform: translate3d(5px,0px,0px);
+}
+
+.skills{
+    background-color: #171717;
+    margin-top: 15px;
+    padding:30px 40px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.skills h1{
+    color: #fff;
+}
+
+.skills .skillset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skills .skillset .skill{
+    padding: 10px;
+    border: 1px solid #4c524c;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.skills .skillset .skill:hover{
+    transform: scale(1.2);
+    border: 1px solid #1eb735d2;
+    cursor: pointer;
+}
+
+.skills .skillset .skill:hover i{
+    color: #fff;
+}
+
+.skills .skillset .skill > i{
+    font-size: 60px;
+    color: #4c524c;
+}
+
+.projects{
+    background-color: #171717;
+    margin-top: 15px;
+    padding:30px 40px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.projects h1{
+    color: #fff;
+}
+
+.projects .project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.projects .project-grid .project-row{
+    background-color: #000;
+    border-radius: 1rem;
+    padding: 0px 0px 10px 0px;
+    transition: all .7s ease;
+}
+
+.projects .project-grid .project-row .project-text{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 25px;
+}
+
+.projects .project-grid .project-row .project-text .left h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.projects .project-grid .project-row .project-text .left p{
+    color: #4c524c;
+    font-size: 14px;
+}
+
+.projects .project-grid .project-row .project-text .right a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    background-color: #4c524c;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.projects .project-grid .project-row .project-text .right a:hover{
+    transform: scale(1.1) translate3d(5px,0px,0px);
+}
+
+.projects .project-grid .project-row .project-img{
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.projects .project-grid .project-row .project-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+.projects .project-grid .project-row .project-img img:hover{
+    transform: scale(1.1);
+}
+
+.contact-section{
+    background-color: #171717;
+    padding: 30px 40px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.contact-section .contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-section h1{
+    color: #fff;
+}
+
+.contact .contact-details{
+    margin-top: 20px;
+}
+
+.contact .contact-details .email,.phone{
+    margin-bottom: 10px;
+}
+
+.contact .contact-details .email p,.phone p{
+    font-size: 25px;
+    font-weight: 500;
+    color: #4c524c;
+}
+
+.contact .contact-details .email a,.phone a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-details .email a:hover,.phone a:hover{
+    text-decoration: underline;
+}
+
+.contact .contact-details .social{
+    align-items: center;
+}
+
+.contact .contact-details .social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid #4c524c;
+    text-decoration: none;
+    color: #4c524c;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    transition: all 0.6s ease;
+    margin-top: 20px;
+}
+
+.contact .contact-details .social a:hover{
+    transform: scale(1.06) rotate3d(0,0,1,360deg);
+    color: #1bed3ad2;
+    border: 1px solid #1bed3ad2;
+}
+
+.contact .contact-form{
+    width: 100%;
+    /* max-width: 600px; */
+    display: grid;
+    gap: 1rem;
+}
+
+.contact .contact-form input,textarea,button{
+    border: none;
+    outline: none;
+    padding: 17px;
+    font: 0.9rem;
+    background-color: #333331;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.contact .contact-form input:focus,textarea:focus{
+    background-color: #fff;
+    color: #000;
+}
+
+.contact .contact-form input::placeholder,textarea::placeholder{
+    color: #000;
+}
+
+.contact .contact-form .contact-btn{
+    display: inline-flex;
+    padding: 18px 25px;
+    background-color: #fff;
+    color: #4c524c;
+    font-weight: 500;
+    font-size: 17px;
+    width: 30%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-form .contact-btn:hover{
+    background-color: #d1cdcd;
+    color: #333331;
+}
+
+.footer{
+    background-color: #171717;
+    padding: 30px 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.18) 0px 2px 4px;
+}
+
+.footer h3{
+    letter-spacing: 2px;
+    color: #1eb735d2;
+}
+
+.footer p{
+    color: #fff;
+}
+
+.scrollTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #1eb735d2;
+    color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+    text-decoration: none;
+}
+
+.scrollTop.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.scrollTop i{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollTop:hover{
+    background-color: #1bed3ad2;
+    cursor: pointer;
+}
+

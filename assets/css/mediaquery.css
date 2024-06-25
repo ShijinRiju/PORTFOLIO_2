@@ -1,0 +1,273 @@
+@media screen and (max-width: 1270px) {
+  .navbar #menu {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    gap: 0;
+    top: 0;
+    left: 0;
+    display: flex; /* Keep it as flex, but control visibility */
+    flex-direction: column;
+    background-color: #171717;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure the element is not interactable when hidden */
+    transform: translateY(-100%); /* Move out of view initially */
+    transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.3s ease; /* Add transition for smooth effect */
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    margin: 0px 0px 25px 0px;
+    font-size: 18px;
+  }
+
+  .navbar .nav-links.open {
+    opacity: 1; /* Show the element */
+    visibility: visible; /* Make the element interactable */
+    transform: translateY(0); /* Move into view */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects .project-grid .project-row .project-text .left h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 434px) {
+  body {
+    margin: 20px 30px;
+  }
+
+  .hero {
+    justify-content: center;
+    gap: 1rem;
+    padding: 30px 30px;
+    flex-direction: column-reverse;
+  }
+
+  .hero-text h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .hero-text .resume,
+  .email {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .hero-image {
+    display: flex;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .about {
+    grid-template-columns: auto;
+  }
+
+  .about .about-me {
+    padding: 30px 40px;
+  }
+
+  .about .about-me h3 {
+    margin-top: 20px;
+  }
+
+  .about .about-me p {
+    margin-top: 20px;
+  }
+
+  .about .courses {
+    padding: 30px 40px;
+  }
+
+  .about .courses .course h3 {
+    margin-top: 20px;
+  }
+
+  .about .courses .course .institute {
+    margin-top: 20px;
+  }
+
+  .about .courses .course .duration {
+    margin-top: 10px;
+  }
+
+  .contact-section .contact {
+    grid-template-columns: auto;
+  }
+
+  .contact .contact-form .contact-btn {
+    width: auto;
+    justify-content: center;
+  }
+
+  .contact .contact-details .email,
+  .phone,
+  .social {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .contact-details .email a,
+  .phone a {
+    font-size: 16px;
+  }
+
+  .contact .contact-details .social a {
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .footer h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 914px) {
+  .hero-text h3 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .hero-text .resume {
+    font-size: 12px;
+  }
+
+  .hero-text .email {
+    font-size: 12px;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+
+  .about .about-me h1 {
+    font-size: 24px;
+  }
+
+  .about .about-me h3 {
+    font-size: 16px;
+  }
+
+  .about .about-me p {
+    font-size: 12px;
+  }
+
+  .about .about-me .contact {
+    font-size: 12px;
+  }
+
+  .about .courses h1 {
+    font-size: 24px;
+  }
+
+  .about .courses .course h3 {
+    font-size: 16px;
+  }
+
+  .about .courses p {
+    font-size: 12px;
+  }
+
+  .about .courses .course .certificate {
+    font-size: 12px;
+  }
+
+  .skills h1{
+    font-size: 24px;
+  }
+
+  .projects h1{
+    font-size: 24px;
+  }
+
+  .contact-section h1{
+    font-size: 24px;
+  }
+
+  .contact-section .contact {
+    grid-template-columns: auto;
+  }
+
+  .contact .contact-details .email,
+  .phone,
+  .social {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .contact-form {
+    width: 100%;
+    /* max-width: 700px; */
+  }
+}
+
+@media screen and (max-width: 903px) {
+  .projects .project-grid {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero-text {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .contact .contact-form .contact-btn {
+    width: 40%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .footer {
+    justify-content: center;
+  }
+
+  .footer p{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 594px) {
+    .about{
+        grid-template-columns: auto;
+    }
+}
